@@ -1,4 +1,5 @@
 # esqueleto-netcore-shell
+A ideia deste projeto eh criar um contexto inteiro em clean architecture sem frescura
 
 # Uso (testado no Linux, ate agora...): 
 ./newproject.sh "NomeDaSolucao" "NomeDoContexto"
