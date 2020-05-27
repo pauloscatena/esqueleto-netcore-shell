@@ -1,7 +1,7 @@
 # esqueleto-netcore-shell
 
 Uso (testado no Linux, ate agora...): 
-./newproject.sh "NomeDoProjeto" "NomeDoContexto"
+./newproject.sh "NomeDaSolucao" "NomeDoContexto"
 
 Exemplo: 
-./newproject.sh "ProjetoTeste" "Usuarios"
+./newproject.sh "SolucaoTeste" "Usuarios"
