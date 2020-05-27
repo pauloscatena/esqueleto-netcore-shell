@@ -1,0 +1,1 @@
+# esqueleto-netcore-shell
