@@ -11,17 +11,22 @@ echo "Criando a solução"
 dotnet new sln -n "$PROJETO"
 
 echo "Criando os projetos"
+mkdir "$CONTEXTO"
+cd "$CONTEXTO"
 dotnet new classlib -n "$PROJETO.$CONTEXTO.Application"
 dotnet new classlib -n "$PROJETO.$CONTEXTO.Domain"
 dotnet new classlib -n "$PROJETO.$CONTEXTO.Infra.Data"
 dotnet new classlib -n "$PROJETO.$CONTEXTO.Infra.Ioc"
 dotnet new webapi -n "$PROJETO.$CONTEXTO.Api"
+cd ..
 
 echo "Adicionando os projetos à solução"
-dotnet sln add "$PROJETO.$CONTEXTO.Application/$PROJETO.$CONTEXTO.Application.csproj"
-dotnet sln add "$PROJETO.$CONTEXTO.Domain/$PROJETO.$CONTEXTO.Domain.csproj"
-dotnet sln add "$PROJETO.$CONTEXTO.Infra.Data/$PROJETO.$CONTEXTO.Infra.Data.csproj"
-dotnet sln add "$PROJETO.$CONTEXTO.Infra.Ioc/$PROJETO.$CONTEXTO.Infra.Ioc.csproj"
+dotnet sln add "$CONTEXTO/$PROJETO.$CONTEXTO.Application/$PROJETO.$CONTEXTO.Application.csproj"
+dotnet sln add "$CONTEXTO/$PROJETO.$CONTEXTO.Domain/$PROJETO.$CONTEXTO.Domain.csproj"
+dotnet sln add "$CONTEXTO/$PROJETO.$CONTEXTO.Infra.Data/$PROJETO.$CONTEXTO.Infra.Data.csproj"
+dotnet sln add "$CONTEXTO/$PROJETO.$CONTEXTO.Infra.Ioc/$PROJETO.$CONTEXTO.Infra.Ioc.csproj"
+
+cd "$CONTEXTO"
 
 echo "Adicionando as referências"
 cd "$PROJETO.$CONTEXTO.Application"
@@ -60,4 +65,5 @@ cd "$PROJETO.$CONTEXTO.Api"
 dotnet add package Swashbuckle.AspNetCore.SwaggerGen
 dotnet add package Swashbuckle.AspNetCore.SwaggerUI
 cd ..
+
 
