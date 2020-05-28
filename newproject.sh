@@ -21,6 +21,7 @@ dotnet new webapi -n "$PROJETO.$CONTEXTO.Api"
 cd ..
 
 echo "Adicionando os projetos à solução"
+dotnet sln add "$CONTEXTO/$PROJETO.$CONTEXTO.Api/$PROJETO.$CONTEXTO.Api.csproj"
 dotnet sln add "$CONTEXTO/$PROJETO.$CONTEXTO.Application/$PROJETO.$CONTEXTO.Application.csproj"
 dotnet sln add "$CONTEXTO/$PROJETO.$CONTEXTO.Domain/$PROJETO.$CONTEXTO.Domain.csproj"
 dotnet sln add "$CONTEXTO/$PROJETO.$CONTEXTO.Infra.Data/$PROJETO.$CONTEXTO.Infra.Data.csproj"
