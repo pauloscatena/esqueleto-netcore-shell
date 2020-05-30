@@ -8,11 +8,11 @@ cd src
 echo "Criando os projetos"
 mkdir "$CONTEXTO"
 cd "$CONTEXTO"
-dotnet new classlib -n "$PROJETO.$CONTEXTO.Application"
-dotnet new classlib -n "$PROJETO.$CONTEXTO.Domain"
-dotnet new classlib -n "$PROJETO.$CONTEXTO.Infra.Data"
-dotnet new classlib -n "$PROJETO.$CONTEXTO.Infra.Ioc"
-dotnet new webapi -n "$PROJETO.$CONTEXTO.Api"
+dotnet new classlib -n "$PROJETO.$CONTEXTO.Application" -f netcoreapp3.1
+dotnet new classlib -n "$PROJETO.$CONTEXTO.Domain" -f netcoreapp3.1
+dotnet new classlib -n "$PROJETO.$CONTEXTO.Infra.Data" -f netcoreapp3.1
+dotnet new classlib -n "$PROJETO.$CONTEXTO.Infra.Ioc" -f netcoreapp3.1
+dotnet new webapi -n "$PROJETO.$CONTEXTO.Api" -f netcoreapp3.1
 cd ..
 
 echo "Adicionando os projetos à solução"
