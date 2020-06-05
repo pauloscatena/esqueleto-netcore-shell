@@ -6,6 +6,7 @@ A ideia deste projeto eh criar um contexto inteiro em clean architecture sem fre
 
 Exemplo: 
 ./newproject.sh "SolucaoTeste" "Usuarios" --> Vai criar uma API
+
 ./newproject.sh "SolucaoTeste" "Usuarios" "console" --> Vai criar um console App
 
 
@@ -14,4 +15,5 @@ Exemplo:
 
 Exemplo: 
 ./addcontext.sh "SolucaoTeste" "Estoque" --> Vai adicionar uma API
+
 ./addcontext.sh "SolucaoTeste" "Estoque" console --> Vai adicionar um Console App
